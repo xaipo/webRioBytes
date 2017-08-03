@@ -1,331 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="img/tab.png" rel="shortcut icon" type="image/png">
-        <title>AllikaySoft</title>
-        <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-        <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-        <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="img/tab.png" rel="shortcut icon" type="image/png">
+    <title>AllikaySoft</title>
+    <meta name="description" content="Sistema Salud Ocupacional">
+    <meta name="keywords"
+          content="Salud Ocupacional">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-        <!--banner-->
-        <section id="banner" class="banner">
-            <div class="bg-color">
-                <nav class="navbar navbar-default navbar-fixed-top">
-                    <div class="container">
-                        <div class="col-md-12">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-responsive" style="width: 107px !important; margin-top: -16px;" ></a>
-                            </div>
-                            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                                <ul class="nav navbar-nav">
-                                    <li class="active"><a href="#banner">Home</a></li>
-                                    <li class=""><a href="#service">Servicios</a></li>
-                                    <li class=""><a href="#about">Nosotros</a></li>
-                                    <li class=""><a href="#testimonial">Testimonios</a></li>
-                                    <li class=""><a href="http://13.67.221.169/AllikaySoft/Site">Ingreso al Sitema</a></li>
-                                    <!--<li class=""><a href="#contact">Contact</a></li>-->
-                                </ul>
-                            </div>
-                        </div>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="Controller/ControllerContacto.js"></script>
+<script src="app.js"></script>
+<!--banner-->
+<section id="banner" class="banner">
+    <div class="bg-color">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="img/logo1.png" class="img-responsive"
+                                                              style="width: 107px !important; margin-top: -16px;"></a>
                     </div>
-                </nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="banner-info">
-                            <div class="banner-logo text-center client-part-haead wow fadeInDown delay-05">
-                                <img src="img/logo.png" class="img-responsive">
-                            </div>
-                            <div class="banner-text text-center">
-                                <h3 class="white">Informatizando tu Salud !!</h3>
-                                <h4 class="white">Sistema de Salud Ocupacional 100% Ecuatoriano</h4>
-                                <p class="white">Powered by Riobytes®</p>
-                                <a href="#contact" class="btn btn-appoint">Empieza tu visita.</a>
-                            </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="overlay-detail text-center">
-                                <a href="#service"><i class="fa fa-angle-down"></i></a>
-                            </div>		
-                        </div>
+                    <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#banner">Home</a></li>
+                            <li class=""><a href="#service">Servicios</a></li>
+                            <li class=""><a href="#about">Nosotros</a></li>
+                            <li class=""><a href="#testimonial">Testimonios</a></li>
+                            <li class=""><a href="http://13.67.221.169/AllikaySoft/Site">Ingreso al Sitema</a></li>
+                            <!--<li class=""><a href="#contact">Contact</a></li>-->
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--/ banner-->
-        <!--service-->
-        <section id="service" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <h2 class="ser-title">Nuestros Servicios</h2>
-                        <hr class="botm-line">
-                        <p> AllikaySoft gestiona todos los datos de Salud Ocupacional cumpliendo con estándares exigidos por el Instituto Ecuatoriano de Seguridad Social (IESS) y el Código de Trabajo.</p>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="banner-info">
+                    <div class="banner-logo text-center client-part-haead wow fadeInDown delay-05">
+                        <img src="img/logo.png" class="img-responsive">
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-info">
-                            <div class="icon">
-                                <i class="fa fa-stethoscope"></i>
-                            </div>
-                            <div class="icon-info">
-                                <h4>Soporte 24 Horas</h4>
-                                <p>AllikaySoft se encuentra desplegado en la nube, por lo que ofrece disponibilidad y soporte de forma inmediata desde cualquier lugar que se lo requiera.</p>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <div class="icon">
-                                <i class="fa fa-hospital-o"></i>
-                            </div>
-                            <div class="icon-info">
-                                <h4>Gestión Historias Clínicas</h4>
-                                <p>Centraliza los datos de tus pacientes por medio de AllikaySoft con datos concistentes y de forma rápida</p>
-                            </div>
-                        </div>
+                    <div class="banner-text text-center">
+                        <h3 class="white">Informatizando tu Salud !!</h3>
+                        <h4 class="white">Sistema de Salud Ocupacional 100% Ecuatoriano</h4>
+                        <p class="white">Powered by Riobytes®</p>
+                        <a href="#contact" class="btn btn-appoint">Empieza tu visita.</a>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="service-info">
-                            <div class="icon">
-                                <i class="fa fa-user-md"></i>
-                            </div>
-                            <div class="icon-info">
-                                <h4>Socialización de Actualizaciones</h4>
-                                <p>El sistema siempre esta bajo actualización los cambios en normativas nacionales, brindando un espacio para la socializacion de nuevas normativas e inquietudes por parte de médicos ocupacionales</p>
-                            </div>
-                        </div>
-                        <div class="service-info">
-                            <div class="icon">
-                                <i class="fa fa-medkit"></i>
-                            </div>
-                            <div class="icon-info">
-                                <h4>Informes de Ausentismo</h4>
-                                <p>Genera los datos referente al ausentismo para una importante gestion de salud dentro de tu empresa.</p>
-                            </div>
-                        </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="overlay-detail text-center">
+                        <a href="#service"><i class="fa fa-angle-down"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--/ service-->
-        <!--cta-->
-        <section id="cta-1" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="schedule-tab">
-                        <div class="col-md-3 col-sm-3 bor-left">
-                            <div class="mt-boxy-color"></div>
-                            <div class="medi-info">
-                                <h3>Modulo Ausentismo</h3>
-                                <p>Puedes llevar un control del ausentismo del personal, lo cual te lleva a tomar decisiones inteligentes, en bien de tu empresa. </p>	    	
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3">
-                            <div class="medi-info">
-                                <h3>Modulo Morbilidad</h3>
-                                <p>La morbilidad genera incovenientes de acuerdo a nuestra experiencia, a traves de bussiness inteligence (BI) puedes tomar decisiones inteligentes para tomar decisiones. </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3">
-                            <div class="medi-info">
-                                <h3>Modulo Historias Clinicas</h3>
-                                <p>Manten una correcta y organiza informacion en las historias clinicas del personal de tu empresa, puedes crear, buscar, modificar o eliminar historias. </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-3">
-                            <div class="medi-info">
-                                <h3>Modulo Discapacidades</h3>
-                                <p>De acuerdo a la ley debes mantener un porcentaje de empleados con discapacidad en toda empresa, gestiona este sector vulnerable con este modulo. </p>
-                            </div>
-                        </div>
+        </div>
+    </div>
+</section>
+<!--/ banner-->
+<!--service-->
+<section id="service" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <h2 class="ser-title">Nuestros Servicios</h2>
+                <hr class="botm-line">
+                <p> AllikaySoft gestiona todos los datos de Salud Ocupacional cumpliendo con estándares exigidos por el
+                    Instituto Ecuatoriano de Seguridad Social (IESS) y el Código de Trabajo.</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-stethoscope"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Soporte 24 Horas</h4>
+                        <p>AllikaySoft se encuentra desplegado en la nube, por lo que ofrece disponibilidad y soporte de
+                            forma inmediata desde cualquier lugar que se lo requiera.</p>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-hospital-o"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Gestión Historias Clínicas</h4>
+                        <p>Centraliza los datos de tus pacientes por medio de AllikaySoft con datos concistentes y de
+                            forma rápida</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-user-md"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Socialización de Actualizaciones</h4>
+                        <p>El sistema siempre esta bajo actualización los cambios en normativas nacionales, brindando un
+                            espacio para la socializacion de nuevas normativas e inquietudes por parte de médicos
+                            ocupacionales</p>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="icon">
+                        <i class="fa fa-medkit"></i>
+                    </div>
+                    <div class="icon-info">
+                        <h4>Informes de Ausentismo</h4>
+                        <p>Genera los datos referente al ausentismo para una importante gestion de salud dentro de tu
+                            empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ service-->
+<!--cta-->
+<section id="cta-1" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="schedule-tab">
+                <div class="col-md-3 col-sm-3 bor-left">
+                    <div class="mt-boxy-color"></div>
+                    <div class="medi-info">
+                        <h3>Modulo Ausentismo</h3>
+                        <p>Puedes llevar un control del ausentismo del personal, lo cual te lleva a tomar decisiones
+                            inteligentes, en bien de tu empresa. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="medi-info">
+                        <h3>Modulo Morbilidad</h3>
+                        <p>La morbilidad genera incovenientes de acuerdo a nuestra experiencia, a traves de bussiness
+                            inteligence (BI) puedes tomar decisiones inteligentes para tomar decisiones. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="medi-info">
+                        <h3>Modulo Historias Clinicas</h3>
+                        <p>Manten una correcta y organiza informacion en las historias clinicas del personal de tu
+                            empresa, puedes crear, buscar, modificar o eliminar historias. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="medi-info">
+                        <h3>Modulo Discapacidades</h3>
+                        <p>De acuerdo a la ley debes mantener un porcentaje de empleados con discapacidad en toda
+                            empresa, gestiona este sector vulnerable con este modulo. </p>
+                    </div>
+                </div>
 
 
-                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--cta-->
+<!--about-->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="section-title">
+                    <h2 class="head-title lg-line">AlikaySoft <br>Salud Ocupacional</h2>
+                    <hr class="botm-line">
+                    <p class="sec-para">Es un sistema seguro, confiable y robusto, se encuentra construido con
+                        tecnologias de vanguardia</p>
                 </div>
             </div>
-        </section>
-        <!--cta-->
-        <!--about-->
-        <section id="about" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                        <div class="section-title">
-                            <h2 class="head-title lg-line">AlikaySoft <br>Salud Ocupacional</h2>
-                            <hr class="botm-line">
-                            <p class="sec-para">Es un sistema seguro, confiable y robusto, se encuentra construido con tecnologias de vanguardia</p>
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <div style="visibility: visible;" class="col-sm-9 more-features-box">
+                    <div class="more-features-box-text">
+                        <div class="more-features-box-text-icon"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </div>
+                        <div class="more-features-box-text-description">
+                            <h3>Es un sistema completamente web</h3>
+                            <p>AlikaySoft es un sistema web, es decir no necesitas instalar el programa, puedes acceder
+                                a el atraves de tu navegador preferido.</p>
                         </div>
                     </div>
-                    <div class="col-md-9 col-sm-8 col-xs-12">
-                        <div style="visibility: visible;" class="col-sm-9 more-features-box">
-                            <div class="more-features-box-text">
-                                <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-                                <div class="more-features-box-text-description">
-                                    <h3>Es un sistema completamente web</h3>
-                                    <p>AlikaySoft es un sistema web, es decir no necesitas instalar el programa, puedes acceder a el atraves de tu navegador preferido.</p>
-                                </div>
-                            </div>
-                            <div class="more-features-box-text">
-                                <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-                                <div class="more-features-box-text-description">
-                                    <h3>La seguridad esta garantizada</h3>
-                                    <p>Los protocoles de seguridad que implementa AlikaySoft, aseguran la proteccion de tus datos, toda la informacion se encuentra cifrada.</p>
-                                </div>
-                            </div>
+                    <div class="more-features-box-text">
+                        <div class="more-features-box-text-icon"><i class="fa fa-angle-right" aria-hidden="true"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--/ about-->
-        <!--doctor team-->
-        <section id="doctor-team" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="ser-title">Conoce a nuestro equipo!</h2>
-                        <hr class="botm-line">
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="thumbnail"> 
-                            <img src="img/jairo.jpg" alt="..." class="team-img">
-                            <div class="caption">
-                                <h3>Jairo Gonzalez</h3>
-                                <p>Scrum Manager</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/xaipo"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com/xaipo"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="thumbnail"> 
-                            <img src="img/juan.jpg" alt="..." class="team-img">
-                            <div class="caption">
-                                <h3>Juan Mishquero</h3>
-                                <p>Quality Assurance</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/eljuanpi.galarza"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="thumbnail"> 
-                            <img src="img/leo.jpg" alt="..." class="team-img">
-                            <div class="caption">
-                                <h3>Jorge Muñoz</h3>
-                                <p>Developer</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/jmunozcueva"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com/JotaMunio"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="thumbnail"> 
-                            <img src="img/cristian.jpg" alt="..." class="team-img">
-                            <div class="caption">
-                                <h3>Christian Quishpi</h3>
-                                <p>Developer</p>
-                                <ul class="list-inline">
-                                    <li><a href="https://www.facebook.com/cristian.quishpi"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
+                        <div class="more-features-box-text-description">
+                            <h3>La seguridad esta garantizada</h3>
+                            <p>Los protocoles de seguridad que implementa AlikaySoft, aseguran la proteccion de tus
+                                datos, toda la informacion se encuentra cifrada.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--/ doctor team-->
-        <!--testimonial-->
-        <section id="testimonial" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="ser-title">¿Deseas leer lo que nuestros clientes opinan?</h2>
-                        <hr class="botm-line">
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="testi-details">
-                            <!-- Paragraph -->
-                            <p>Ninguna empresa me brindo un soporte tan agil como Riobytes, siempre estan al pendiente</p>
-                        </div>
-                        <div class="testi-info">
-                            <!-- User Image -->
-                            <a href="#"><img src="img/cliente1.jpg" alt="" class="img-responsive"></a>
-                            <!-- User Name -->
-                            <h3>Lenin Velastegui<span>Riobamba, Ecuador</span></h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="testi-details">
-                            <!-- Paragraph -->
-                            <p>Es un sistema que no necesita de esas odiosas y largas capacitaciones, es un muy facil de usar</p>
-                        </div>
-                        <div class="testi-info">
-                            <!-- User Image -->
-                            <a href="#"><img src="img/cliente2.jpg" alt="" class="img-responsive"></a>
-                            <!-- User Name -->
-                            <h3>Edison Garcia<span>Quito, Ecuador</span></h3>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="testi-details">
-                            <!-- Paragraph -->
-                            <p>Ofrece un gran cobertura de servicios, con el mantengo un control integro de mis empleados, y me evito multas</p>
-                        </div>
-                        <div class="testi-info">
-                            <!-- User Image -->
-                            <a href="#"><img src="img/cliente3.jpg" alt="" class="img-responsive"></a>
-                            <!-- User Name -->
-                            <h3>Irene Conde<span>Quito, Ecuador</span></h3>
-                        </div>
+        </div>
+    </div>
+</section>
+<!--/ about-->
+<!--doctor team-->
+<section id="doctor-team" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="ser-title">Conoce a nuestro equipo!</h2>
+                <hr class="botm-line">
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="thumbnail">
+                    <img src="img/jairo.jpg" alt="..." class="team-img">
+                    <div class="caption">
+                        <h3>Jairo Gonzalez</h3>
+                        <p>Scrum Manager</p>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/xaipo"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/xaipo"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--/ testimonial-->
-        <!--cta 2-->
-        <section id="cta-2" class="section-padding">
-            <div class="container">
-                <div class=" row">
-                    <div class="col-md-2"></div>
-                    <div class="text-right-md col-md-4 col-sm-4">
-                        <h2 class="section-title white lg-line">« Unas palabras<br> acerca de nosotros »</h2>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="thumbnail">
+                    <img src="img/juan.jpg" alt="..." class="team-img">
+                    <div class="caption">
+                        <h3>Juan Mishquero</h3>
+                        <p>Quality Assurance</p>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/eljuanpi.galarza"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-4 col-sm-5">
-                        AlikaySoft te brinda la opotunidad de gestionar la salud ocupacional de manera sencilla e intuitiva,
-                        siempre cumpliendo con los estandares fijados en la legislacion ecuatoriana, lo que se traduce en beneficios
-                        para tu empresa.
-                        <p class="text-right text-primary"><i>— Alikay Software</i></p>
-                    </div>
-                    <div class="col-md-2"></div>
                 </div>
             </div>
-        </section>
-        <!--cta-->
-        <!--contact-->
-        <!--<section id="contact" class="section-padding">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="thumbnail">
+                    <img src="img/leo.jpg" alt="..." class="team-img">
+                    <div class="caption">
+                        <h3>Jorge Muñoz</h3>
+                        <p>Developer</p>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/jmunozcueva"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/JotaMunio"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="thumbnail">
+                    <img src="img/cristian.jpg" alt="..." class="team-img">
+                    <div class="caption">
+                        <h3>Christian Quishpi</h3>
+                        <p>Developer</p>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/cristian.quishpi"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ doctor team-->
+<!--testimonial-->
+<section id="testimonial" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="ser-title">¿Deseas leer lo que nuestros clientes opinan?</h2>
+                <hr class="botm-line">
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="testi-details">
+                    <!-- Paragraph -->
+                    <p>Ninguna empresa me brindo un soporte tan agil como Riobytes, siempre estan al pendiente</p>
+                </div>
+                <div class="testi-info">
+                    <!-- User Image -->
+                    <a href="#"><img src="img/cliente1.jpg" alt="" class="img-responsive"></a>
+                    <!-- User Name -->
+                    <h3>Lenin Velastegui<span>Riobamba, Ecuador</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="testi-details">
+                    <!-- Paragraph -->
+                    <p>Es un sistema que no necesita de esas odiosas y largas capacitaciones, es un muy facil de
+                        usar</p>
+                </div>
+                <div class="testi-info">
+                    <!-- User Image -->
+                    <a href="#"><img src="img/cliente2.jpg" alt="" class="img-responsive"></a>
+                    <!-- User Name -->
+                    <h3>Edison Garcia<span>Quito, Ecuador</span></h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="testi-details">
+                    <!-- Paragraph -->
+                    <p>Ofrece un gran cobertura de servicios, con el mantengo un control integro de mis empleados, y me
+                        evito multas</p>
+                </div>
+                <div class="testi-info">
+                    <!-- User Image -->
+                    <a href="#"><img src="img/cliente3.jpg" alt="" class="img-responsive"></a>
+                    <!-- User Name -->
+                    <h3>Irene Conde<span>Quito, Ecuador</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ testimonial-->
+<!--cta 2-->
+<section id="cta-2" class="section-padding">
+    <div class="container">
+        <div class=" row">
+            <div class="col-md-2"></div>
+            <div class="text-right-md col-md-4 col-sm-4">
+                <h2 class="section-title white lg-line">« Unas palabras<br> acerca de nosotros »</h2>
+            </div>
+            <div class="col-md-4 col-sm-5">
+                AlikaySoft te brinda la opotunidad de gestionar la salud ocupacional de manera sencilla e intuitiva,
+                siempre cumpliendo con los estandares fijados en la legislacion ecuatoriana, lo que se traduce en
+                beneficios
+                para tu empresa.
+                <p class="text-right text-primary"><i>— Alikay Software</i></p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+<!--cta-->
+<!--contact-->
+<!--<section id="contact" class="section-padding">
 <div class="container">
 <div class="row">
 <div class="col-md-12">
@@ -375,67 +400,71 @@ New York, NY 17022</p>
 </div>
 </div>
 </section>-->
-        <!--/ contact-->
-        <!--footer-->
-        <footer id="footer">
-            <div class="top-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 marb20">
-                            <div class="ftr-tle">
-                                <h4 class="white no-padding">Acerca de nosotros</h4>
-                            </div>
-                            <div class="info-sec">
-                                <p>Somos un grupo de jovenes emprendedores, buscamos el equilibrio entre el uso de tecnologias nuevas
-                                    y la satisfaccion del cliente.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 marb20">
-                            <div class="ftr-tle">
-                                <h4 class="white no-padding">Enlaces Rapidos</h4>
-                            </div>
-                            <div class="info-sec">
-                                <ul class="quick-info">
-                                    <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                                    <li><a href="#service"><i class="fa fa-circle"></i>Servicios</a></li>
-                                    <li><a href="#contact"><i class="fa fa-circle"></i>Nosotros</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 marb20">
-                            <div class="ftr-tle">
-                                <h4 class="white no-padding">Siguenos..!</h4>
-                            </div>
-                            <div class="info-sec">
-                                <ul class="social-icon">
-                                    <li class="bgwhite"><a href="https://www.facebook.com/riobytes/"><i class="fa fa-facebook icons"></i></li>
-                                    <li class="bgwhite"><a href="https://www.linkedin.com/in/jorge-muñoz-906032148/"><i class="fa fa-linkedin icons"></i></li>
-                                    <li class="bgwhite"><a href="https://twitter.com/RiobytesS"><i class="fa fa-twitter icons"></i></li>
-                                </ul>
-                            </div>
-                        </div>
+<!--/ contact-->
+<!--footer-->
+<footer id="footer">
+    <div class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">Acerca de nosotros</h4>
+                    </div>
+                    <div class="info-sec">
+                        <p>Somos un grupo de jovenes emprendedores, buscamos el equilibrio entre el uso de tecnologias
+                            nuevas
+                            y la satisfaccion del cliente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">Enlaces Rapidos</h4>
+                    </div>
+                    <div class="info-sec">
+                        <ul class="quick-info">
+                            <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                            <li><a href="#service"><i class="fa fa-circle"></i>Servicios</a></li>
+                            <li><a href="#contact"><i class="fa fa-circle"></i>Nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 marb20">
+                    <div class="ftr-tle">
+                        <h4 class="white no-padding">Siguenos..!</h4>
+                    </div>
+                    <div class="info-sec">
+                        <ul class="social-icon">
+                            <li class="bgwhite"><a href="https://www.facebook.com/riobytes/">
+                                    class="fa fa-facebook icons"><li/>
+                            <li class="bgwhite"><a href="https://www.linkedin.com/in/jorge-muñoz-906032148/">
+                                    class="fa fa-linkedin icons"><li/>
+                            <li class="bgwhite"><a href="https://twitter.com/RiobytesS">
+                                    class="fa fa-twitter icons"><li/>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="footer-line">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            © Copyright Riobytes Solutions. Todos los derechos reservados
-                            <div class="credits">
-                                Designed by <a href="http://riobytes.com/">Riobytes</a>
-                            </div>
-                        </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    © Copyright Riobytes Solutions. Todos los derechos reservados
+                    <div class="credits">
+                        Designed by <a href="http://riobytes.com/">Riobytes</a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!--/ footer-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/custom.js"></script>
-        <script src="contactform/contactform.js"></script>
+        </div>
+    </div>
+</footer>
+<!--/ footer-->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="contactform/contactform.js"></script>
 
-    </body>
+</body>
 </html>
