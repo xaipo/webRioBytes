@@ -1,10 +1,7 @@
-/**
- * Created by xaipo on 8/2/2017.
- */
-'use strict';
 
-// Declare app level module which depends on views, and components
-var app = angular.module("myApp", [])
+angular.module('myApp', ['ngStorage']);
+
+var app = angular.module("myApp", []);
 var server='localhost';
 
 function ApiUrl(){

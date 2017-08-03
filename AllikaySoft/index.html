@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="Controller/ControllerContacto.js"></script>
 </head>
@@ -219,63 +219,70 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="ser-title">Conoce a nuestro equipo!</h2>
+                <h2 class="ser-title">Contactanos!</h2>
                 <hr class="botm-line">
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="thumbnail">
-                    <img src="img/jairo.jpg" alt="..." class="team-img">
-                    <div class="caption">
-                        <h3>Jairo Gonzalez</h3>
-                        <p>Scrum Manager</p>
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/xaipo"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/xaipo"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="thumbnail">
-                    <img src="img/juan.jpg" alt="..." class="team-img">
-                    <div class="caption">
-                        <h3>Juan Mishquero</h3>
-                        <p>Quality Assurance</p>
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/eljuanpi.galarza"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="thumbnail">
-                    <img src="img/leo.jpg" alt="..." class="team-img">
-                    <div class="caption">
-                        <h3>Jorge Muñoz</h3>
-                        <p>Developer</p>
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/jmunozcueva"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://twitter.com/JotaMunio"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6">
-                <div class="thumbnail">
-                    <img src="img/cristian.jpg" alt="..." class="team-img">
-                    <div class="caption">
-                        <h3>Christian Quishpi</h3>
-                        <p>Developer</p>
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/cristian.quishpi"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+           <div class="col-md-12" ng-controller="ControllerContactos">
+
+               <div class="form-group">
+                   <label  class="col-sm-2 control-label">Nombres</label>
+
+                   <div class="col-sm-10">
+                       <input type="text" class="form-control" ng-model="nombres" >
+                   </div>
+               </div>
+
+<br>
+
+               <div class="form-group">
+                   <label  class="col-sm-2 control-label">Ciudad</label>
+
+                   <div class="col-sm-10">
+                       <input type="text" class="form-control"  ng-model="ciudad">
+                   </div>
+               </div>
+               <br>
+               <div class="form-group">
+                   <label  class="col-sm-2 control-label">Correo</label>
+
+                   <div class="col-sm-10">
+                       <input type="text" class="form-control"  ng-model="correo">
+                   </div>
+               </div>
+
+               <br>
+
+               <div class="form-group">
+                   <label  class="col-sm-2 control-label">Telefono</label>
+
+                   <div class="col-sm-10">
+                       <input type="text" class="form-control" ng-model="telefono" >
+                   </div>
+               </div>
+
+               <br>
+               <div class="form-group">
+                   <label  class="col-sm-2 control-label">Observacion</label>
+
+                   <div class="col-sm-10">
+                       <textarea class="form-control" rows="3"  ng-model="observacion" ></textarea>
+
+                   </div>
+               </div>
+
+               <br>
+               <div class="form-group" >
+
+               <button type="submit" class="btn btn-primary col-sm-2  " ng-click="enviar()" >Enviar</button>
+
+
+                   <div class="col-sm-10">
+                       {{mensaje}}
+                   </div>
+
+               </div>
+
+           </div>
         </div>
     </div>
 </section>
