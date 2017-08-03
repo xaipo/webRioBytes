@@ -1,8 +1,7 @@
 
-angular.module('myApp', ['ngStorage']);
 
 var app = angular.module("myApp", []);
-var server='localhost';
+var server='13.67.221.169';
 
 function ApiUrl(){
 

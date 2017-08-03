@@ -23,7 +23,7 @@ app.controller('ControllerContactos', ['$scope', '$http', 'myProvider',  functio
 
         }
 
-        $http.post('http://localhost:3000/api/contacto',obj)
+        $http.post('http://13.67.221.169:3000/api/contacto',obj)
             .success(function (data) {
 
                 console.log(data);
