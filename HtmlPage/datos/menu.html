@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<title>Seleccionar opción para mostrar un formulario u otro</title>-->
+<!--<link type="text/css" href="css/styles.css" rel="stylesheet">-->
+<script type="js/jquery.min.js"></script>
+<script type="text/javascript">
+function mostrar(id) {
+	if (id == "estudiante") {
+		$("#estudiante").show();
+		$("#trabajador").hide();
+		$("#autonomo").hide();
+		$("#paro").hide();
+	}
+	
+	if (id == "trabajador") {
+		$("#estudiante").hide();
+		$("#trabajador").show();
+		$("#autonomo").hide();
+		$("#paro").hide();
+	}
+	
+	if (id == "autonomo") {
+		$("#estudiante").hide();
+		$("#trabajador").hide();
+		$("#autonomo").show();
+		$("#paro").hide();
+	}
+	
+	if (id == "paro") {
+		$("#estudiante").hide();
+		$("#trabajador").hide();
+		$("#autonomo").hide();
+		$("#paro").show();
+	}
+}
+</script>
+</head>
+
+<body>
+<form action="index.php" method="post">
+	Estado actual: 
+    <select id="status" name="status" onChange="mostrar(this.value);">
+        <option value="estudiante">Estudiante</option>
+        <option value="trabajador">Trabajador</option>
+        <option value="autonomo">Autónomo</option>
+        <option value="paro">En el paro</option>
+     </select>
+</form>
+
+<div id="estudiante" class="element" style="display: none;">
+	<h2>Si eres estudiante...</h2>
+    <form action="index.php" method="post">
+    	<p>Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+        <p>Centro:<br/>
+    	<input type="text" name="centro" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+<div id="trabajador" class="element" style="display: none;">
+	<h2>Si eres trabajador...</h2>
+    <form action="index.php" method="post">
+    	<p>Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+        <p>Empresa:<br/>
+    	<input type="text" name="centro" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+<div id="autonomo" class="element" style="display: none;">
+	<h2>Si eres autónomo...</h2>
+    <form action="index.php" method="post">
+    	<p>Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+        <p>Empresa:<br/>
+    	<input type="text" name="empresa" /></p>
+         <p>Ingresos anuales:<br/>
+    	<input type="text" name="ingresos" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+<div id="paro" class="element" style="display: none;">
+	<h2>Si estás en el paro...</h2>
+	 <form action="index.php" method="post">
+    	<p<Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+       <p> Última empresa:<br/>
+    	<input type="text" name="empresa" /></p>
+         <p>Tiempo en paro:<br/>
+    	<input type="text" name="tiempo" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+</body>
+</html>

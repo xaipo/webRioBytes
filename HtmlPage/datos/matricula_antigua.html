@@ -1,0 +1,235 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+ <h2 class="clr-6">Formulario Pre-Matricula</h2>
+  <hr style="color: #0056b2;" />
+                    <form id="form"  method="POST" ng-init="inimodificar()">
+
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Cédula:</strong> </label>
+                          </div>
+                          <div class="col-md-6" >
+                            <input type="text" class ="form-control" value="{{estudiante.CEDULA}}" name= "cedula" id="cedula" size="10"  required autofocus placeholder="Cédula del niño/a" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" >
+                          </div>  
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Nombre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="{{estudiante.NOMBRE}}" name="nombre" id="textnom_usuario" required placeholder="Nombre del niño/a" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Fecha de Naciemiento:</strong> </label>
+                          </div>
+                          <div class="col-md-4">
+                             <input type="textdate" class ="form-control" value="{{estudiante.FECHA_NACIMIENTO}}" name="fecha_na" id="textfecha_naci">
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Sexo</strong></label>
+                          </div>
+                          <div class="col-md-6">
+                             <input type="radio" value="M" name="sexo" id="opsexo" checked="checked"/> Masculino
+                             <input type="radio" value="F" name="sexo" id="opsexo"/> Femenino
+                          </div>
+                      </div>
+
+                     <div class="row"> 
+                            
+                              <div class="col-md-2">
+                                <label><strong>Talla</strong></label>
+                              </div>
+                              <div class="col-md-3" class="input-group">
+                                <input type="number" class ="form-control" value="{{estudiante.TALLA}}" name="talla" id="numtalla" placeholder="en cm">
+                              </div>    
+                           
+                       </div>
+                      <div class="row">     
+                              <div class="col-md-2">
+                                <label><strong>Peso: </strong></label>
+                              </div>
+                              <div class="col-md-3">
+                                <input type="number" class ="form-control" value="{{estudiante.PESO}}" name="peso" id="numpeso" placeholder="en lb">
+                              </div>    
+                           
+                       </div>
+                        <div class="row">    
+                              <div class="col-md-2">
+                                <label><strong>Torax: </strong></label>
+                              </div>
+                              <div class="col-md-3">
+                                <input type="number" class ="form-control" value="{{estudiante.TORAX}}" name="torax" id="numtorax" placeholder="en cm">
+                              </div>    
+                          
+
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Jornada</strong></label>
+                          </div>
+                          <div class="col-md-4" >
+                             <select class="form-control" id="jornada" name="jornada">
+                              <option ng-repeat="x in listajornada" value="{{x.ID_JORNADA}}" >{{x.DESCRIPCION_JORNADA}}</option> 
+                              
+                             </select>
+                          </div>
+                      </div>
+
+                       <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Nivel: </strong></label>
+                          </div>
+                          <div class="col-md-4">
+                            <select class="form-control" id="nivel" name="level">
+                              <option ng-repeat="x in listanivel" value="{{x.ID_NIVEL}}">{{x.DESCRIPCION_NIVEL}}</option> 
+                              
+                             </select>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Lunch: </strong></label>
+                          </div>
+                          <div class="col-md-4">
+                             <select class="form-control" id="lunch" name="lunch">
+                              <option ng-repeat="x in listalunch" value="{{x.ID_REFRIGERIO}}">{{x.DESCRIPCION_REFRI}}</option> 
+                              
+                             </select>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Alimentos que no puede consumir: </strong></label>
+                          </div>
+                          <div class="col-md-8">
+                             <textarea class="form-control" name="alimen_exc" id="textalimen_exc" placeholder="Opcional" value="{{estudiante.ALIMENTOS_EXCLUIDOS}}"></textarea>
+                          </div>
+                      </div>
+                      <br>
+
+                       <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Problemas de salud: </strong></label>
+                          </div>
+                          <div class="col-md-8">
+                             <textarea class="form-control" name="prob_salud" id="textprob_salud" placeholder="Opcional" value="{{estudiante.PROBLEMAS_SALUD}}"></textarea>
+                          </div>
+                      </div>
+                      <br>
+                       <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Alergias del niño: </strong></label>
+                          </div>
+                          <div class="col-md-8">
+                             <textarea class="form-control" name="aler_niño" id="textaler_niño" placeholder="Opcional" value="{{estudiante.ALERGIAS}}"></textarea>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Medicacion que recibe: </strong></label>
+                          </div>
+                          <div class="col-md-8">
+                             <textarea class="form-control" name="medi_recibe" id="textmedi_recibe" placeholder="Opcional" value="{{estudiante.MEDICACION}}"></textarea>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Nombre del pediatra: </strong></label>
+                          </div>
+                          <div class="col-md-5">
+                             <input type="text" class ="form-control" value="{{estudiante.PEDIATRA}}" name="nom_pedia" id="text_nom_pedia" onkeypress="return soloLetras(event)" maxlength="50" placeholder="Pediatra">
+                          </div>
+                          <div class="col-md-2">
+                          <label><strong>Telf: </strong></label>
+                          </div>
+                          <div class="col-md-3">
+                          <input type="text" class ="form-control" value="{{estudiante.TEL_PEDIATRA}}" name="numtelf" id="numtelf" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" placeholder="Telf Pediatra">
+                          </div>
+                      </div>
+                   
+                      <div class="row">
+                          <div class="col-md-2">
+                          <label><strong>Persona que recibe al niño: </strong></label>
+                          </div>
+                          <div class="col-md-5">
+                             <input type="text" class ="form-control" value="{{estudiante.PERSO_RECIBIR_NINO}}" name="reci_niño" id="textreci_niño" onkeypress="return soloLetras(event)" maxlength="50" placeholder="Papa, Mama, hermano, etc">
+                          </div>
+                          <div class="col-md-2">
+                          <label><strong>Telf de emergencia: </strong></label >
+                          </div>
+                          <div class="col-md-3">
+                          <input type="text" class ="form-control" value="{{estudiante.TEL_EMERGENCIA}}" name="telf_emerg" id="num_telf_emerg" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" placeholder="Papa, mama, ect">
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Observaciones: </strong></label>
+                          </div>
+                          <div class="col-md-8">
+                             <textarea class="form-control" name="observ" id="textobserv" placeholder="Opcional" value="{{estudiante.OBSERVACIONES}}"></textarea>
+                          </div>
+                      </div>
+                      <br>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Centro educativo anterior:</strong> </label>
+                          </div>
+                          <div class="col-md-5">
+                            <input type="text" class ="form-control" value="{{estudiante.CENTRO_EDU_ANTERIOR}}" name="centro_edu" id="textcentro_edu" placeholder="Opcional">
+                          </div>  
+                      </div>
+                        <br>
+                        <div class="row"> 
+                        <div class="col-md-7">
+                          
+                        <!--<div class="g-recaptcha" data-sitekey="6LfSCyAUAAAAAOA6aAj7OR3RjaXHsWuIcwyi_d6X"></div>--> <!--Web-->
+                        <!--<div class="g-recaptcha" data-sitekey="6LfoTCAUAAAAAEWWOYLpk4QqJAbBS4y0alaJdGXl"></div>-->
+                        </div>   
+                      </div>
+                     
+                     <br>
+                      <div class="row"> 
+                        <div class="col-md-3">
+                          
+
+                        </div>
+                        <div class="col-md-3">
+                          <input class="btn btn-lg btn-primary btn-block" type="button" id = "btncancelar" value="Cancelar" ng-click="inicializar()"></input>
+
+                        </div>
+
+                        <div class="col-md-3">
+                          <input class="btn btn-lg btn-primary btn-block" type="button" id = "btnmodificar" value="Guardar" ng-click="enviarModificacion()"></input>
+
+                        </div>
+
+                      </div>
+                       <div class="row"> 
+                        <div class="col-md-3">
+                          
+                       
+                        </div>  
+                         <div class="col-md-6">
+
+                          <input class="btn btn-lg btn-primary btn-block" type="button" id = "btnsiguiente" value="Siguiente" ng-click="datospadresmodificar()"></input>
+
+                        </div>  
+                      </div>
+                       <hr style="color: #0056b2;" />
+                      <div id="resultado">
+
+
+                      </div>
+                    </form> 

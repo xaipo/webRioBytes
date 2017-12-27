@@ -1,0 +1,55 @@
+ <h2 class="clr-6">Estado de las matriculas</h2>
+ <hr style="color: #0056b2;" />
+<div class="alert alert-success">Matriculas Activas</div>
+
+ <form id="form"  >
+                    <p >Verifica si tu niño/a se encuentra en la base de datos:</p>
+                    <br>
+                    <div class="row">
+                      <div class="col-md-6" >
+                     <label for="sel1" id="op" >Escoga una opcion de busqueda:</label>
+                      <select class="form-control" id="sel1" ng-click="escogerOpcion()">
+                        <option >Cédula</option>
+                        <option>Nombre</option>
+                      </select>
+                    </div>
+                    </div>
+                    <br>
+                    
+
+                    <div id="cedula"  style="display: none;" class="element">
+                      <label>Ingrese el numero de cedula a consultar:</label>
+                      <div class="row">
+                          
+                          <div class="col-md-6" >
+                            <input type="text" class ="form-control" value="" name= "cedula" id="cedula_con" size="10"  required autofocus placeholder="Cédula del niño/a" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                          </div>  
+                          <div class="col-md-4" >
+                            <input class="btn btn-lg btn-primary btn-block" type="button" id = "btnconsulta" value="Consultar" ng-click="consultar_cedula()">
+
+                          </div>  
+
+                      </div>
+                    </div>
+
+                    <div id="nombre"  style="display: none;" class="element">
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Nombre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="textnom_usuario" id="textnom_usuario" required placeholder="Nombre del niño/a" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                    </div>
+                    <hr style="color: #0056b2;" />
+                  <br>
+                  <br>
+                    <div id="mensaje">
+
+                    </div>
+
+                      
+                  </form>
+                  
+

@@ -1,0 +1,232 @@
+<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+ <h2 class="clr-6">Formulario Pre-Matricula</h2>
+ <hr style="color: #0056b2;" />
+ <h3>Datos del padre:</h3>
+                    <form id="form" action="fpdf/imprimirformulario.php" method="POST"  ng-init="inidatosestu()" >
+
+            
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Cédula:</strong> </label>
+                          </div>
+                          <div class="col-md-6" >
+                            <input type="text" class ="form-control"  ng-model = "datapadre.CI_PADRE" name= "cedulapa" id="textcedulapa" size="10"   maxlength="10" placeholder="Cedula del padre" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                          </div>  
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Nombre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control"  ng-model = "datapadre.NOMBRE" name="nombrepa" id="textnombrepa" required placeholder="Nombre del padre" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Lugar de trabajo:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control"  ng-model = "datapadre.LUGAR_TRABAJO" name="lugar_trapa" id="textlugar_trapa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Direccion de trabajo:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" ng-model = "datapadre.DIRECCION_TRABAJO" name="dir_trapa" id="textdir_trapa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Telefono del padre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" ng-model = "datapadre.TEL_PADRE" name="tel_padre" id="texttel_pa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Email padre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" ng-model = "datapadre.EMAIL" name="email_padre" id="textemail_pa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Direccion de domicilio:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" ng-model = "datapadre.DIRECCION_DOMICILIO" name="dir_do_pa" id="textdir_do_pa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                      <div class="col-md-6" >
+                     <label for="viviendapa"  >Tipo de vivienda:</label>
+                      <select class="form-control" id="viviendapa" name="viviendapadre">
+                        <option >Propia</option>
+                        <option>Arrendada</option>   
+                        <option>Prestada</option>                     
+                      </select>
+                    </div>
+                    </div>
+                    <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Tel Aux:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" ng-model = "datapadre.TEL_AUX" name="tel_aux_pa" id="texttel_aux_pa" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+
+                      <hr style="color: #0056b2;" />
+
+                      <h3>Datos de la madre:</h3>
+
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Cédula:</strong> </label>
+                          </div>
+                          <div class="col-md-6" >
+                            <input type="text" class ="form-control" value="" name= "cedulama" id="textcedulama" size="10"  required autofocus placeholder="Cédula de la madre" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+                          </div>  
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Nombre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="nombrema" id="textnombrema" required placeholder="Nombre de la madre" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                      <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Lugar de trabajo:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="lugar_tra_ma" id="textlugar_tra_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Direccion de trabajo:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="dir_tra_ma" id="textdir_tra_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Telefono del madre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="tel_madre" id="texttel_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Email madre:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="email_madre" id="textemail_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Direccion de domicilio:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="dir_do_ma" id="textdir_do_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+                       <div class="row">
+                      <div class="col-md-6" >
+                     <label for="viviendama"  >Tipo de vivienda:</label>
+                      <select class="form-control" id="viviendama">
+                        <option >Propia</option>
+                        <option>Arrendada</option>   
+                        <option>Prestada</option>                     
+                      </select>
+                    </div>
+                    </div>
+                    <div class="row">
+                          <div class="col-md-2">
+                            <label><strong>Tel Aux:</strong> </label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class ="form-control" value="" name="tel_aux_ma" id="texttel_aux_ma" required placeholder="Opcional" onkeypress="return soloLetras(event)" maxlength="50">
+                          </div>  
+                      </div>
+
+<!--datos del estudiante-->
+                      
+                            <input name= "cedula" id="cedula_estu" ng-model="estu.CEDULA">
+ 
+                            <input name="nombre" id="nombre_estu" ng-model="estu.NOMBRE">
+                
+                             <input name="fecha_na" id="fecha_estu" ng-model="estu.FECHA_NACIMIENTO">
+                             <input name="sexo" id="sexo_estu" ng-model="estu.SEXO">
+
+                                <input  name="talla" id="talla_estu" ng-model="estu.TALLA">
+                    
+                                <input name="peso" id="peso_estu" ng-model="estu.PESO">
+                         
+                                <input name="torax" id="torax_estu" ng-model="estu.TORAX">
+                                <input name="jornada1" id="jornada_estu" ng-model="nombre_jornada">
+                                <input name = "level" id="level_estu" VALUE="NIVffff">
+                                <input name="lunch" id="lunch_estu" ng-model="estu. ID_REFRIGERIO">
+                     
+                             <textarea name="alimen_exc" id="alimenros_estu"  ng-model="estu.ALIMENTOS_EXCLUIDOS" ></textarea>
+                       
+                             <textarea  name="prob_salud" id="problemas_estu" ng-model="estu.PROBLEMAS_SALUD"></textarea>
+                   
+                             <textarea  name="aler_niño" id="alergias_estu" ng-model="estu.ALERGIAS"></textarea>
+                       
+                             <textarea name="medi_recibe" id="medicacion_estu" ng-model="estu.MEDICACION"></textarea>
+                       
+                             <input  name="nom_pedia" id="nompedi_estu" ng-model="estu.PEDIATRA">
+                       
+                          <input  name="numtelf" id="numtelf_estu" ng-model="estu.TEL_PEDIATRA">
+                        
+                             <input  name="reci_niño" id="reciniño_estu" ng-model="estu.PERSO_RECIBIR_NINO">
+                        
+                          <input  name="telf_emerg" id="telfemer_estu" ng-model="estu.TEL_EMERGENCIA">
+                       
+                             <textarea  name="observ" id="observ_estu" ng-model="estu.OBSERVACIONES"></textarea>
+                        
+                            <input  name="centro_edu" id="centroedu_estu" ng-model="estu.CENTRO_EDU_ANTERIOR">
+                     
+                        <div class="col-md-4">
+                        
+                        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Genrar reporte"></input>
+                        </div>  
+                      </div>
+                     
+                     <br>
+                      <div class="row"> 
+                        <div class="col-md-3">
+                          
+
+                        </div>
+                        <div class="col-md-3">
+                          <input class="btn btn-lg btn-primary btn-block" type="button" id = "btncancelar" value="Cancelar" ng-click="inicializar()"></input>
+
+                        </div>
+
+                        <div class="col-md-3">
+                          <input class="btn btn-lg btn-primary btn-block" type="reset" id = "btnregistrar" value="Guardar" ng-click="enviarDatosPadres()" target="_blank"></input>
+
+                        </div>
+
+
+                      </div>
+                       <hr style="color: #0056b2;" />
+                      <br>
+                      <div id="resultado">
+
+
+                      </div>
+                    </form> 
